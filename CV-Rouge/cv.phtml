@@ -1,0 +1,118 @@
+<?php
+
+/*Récupérations des informations du formulaire de la section #form-information*/
+
+$nom = $_POST['nom'];
+$prenom = $_POST['prenom'];
+$email = $_POST['email'];
+$telephone = $_POST['telephone'];
+$linkedin = $_POST['linkedin'];
+$github = $_POST['github'];
+$poste = $_POST['poste'];
+$biographie = $_POST['biographie'];
+
+/*Récupérations des informations du formulaire de la section #form-competences*/
+
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CV</title>
+</head>
+<body>
+    <header id="cv-rouge-header">
+        <h1><?php 
+            echo $nom." ";
+            echo $prenom;
+            ?></h1>
+        <h2><?php echo $poste; ?></h2>
+    </header>
+    <main id="cv-rouge-main">
+        <section id="cv-rouge-informations">
+            <h3>INFORMATIONS</h3>
+            <h4>Contact</h4>
+            <h5>EMail</h5>
+            <p><?php echo $email; ?></p>
+            <h5>Téléphone</h5>
+            <p><?php echo $telephone; ?></p>
+            <h5>LinkedIn</h5>
+            <p><?php echo $linkedin; ?></p>
+            <h5>GitHub</h5>
+            <p><?php echo $github ?></p>
+            <h5>Biographie</h5>
+            <p><?php echo $biographie ?></p>
+            <h4>Loisirs</h4>
+            <ul id="liste-loisirs">
+            <?php
+                if(isset($_POST['loisirs']) && !empty($_POST['loisirs']))
+                {
+                foreach($_POST['loisirs'] as $loisir)
+                {
+                echo "<li>".$loisir."</li>";
+                }
+                }
+            ?>
+            </ul>
+        </section>
+
+        <section id="cv-rouge-competences">
+            <h3>COMPÉTENCES</h3>
+            <h4>Langages de programmation</h4>
+            <ul id="liste-langages">
+            <?php
+                if(isset($_POST['langages']))
+                {
+                foreach($_POST['langages'] as $langage)
+                {
+                echo "<li>".$langage."</li>";
+                }
+                }
+            ?>
+            </ul>
+            <h4>Frameworks et librairies</h4>
+            <ul id="liste-frameworks">
+            <?php
+                if(isset($_POST['frameworks']) && !empty($_POST['frameworks']))
+                {
+                foreach($_POST['frameworks'] as $framework)
+                {
+                echo "<li>".$framework."</li>";
+                }
+                }
+            ?>
+            </ul>
+            <h4>Logiciels</h4>
+            <ul id="liste-logiciels">
+            <?php
+                if(isset($_POST['logiciels']) && !empty($_POST['logiciels']))
+                {
+                foreach($_POST['logiciels'] as $logiciel)
+                {
+                echo "<li>".$logiciel."</li>";
+                }
+                }
+            ?>
+            </ul>
+            <h4>Langues</h4>
+            <ul id="liste-langues">
+            <?php
+                if(isset($_POST['langues']) && !empty($_POST['langues']))
+                {
+                foreach($_POST['langues'] as $langue)
+                {
+                echo "<li>".$langue."</li>";
+                }
+                }
+            ?>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

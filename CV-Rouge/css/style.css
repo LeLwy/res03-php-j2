@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*POLICE*/
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--blanc-fond);
+}
+
+/*COULEURS*/
+
+:root{
+
+    --rouge : #b50604;  
+    --bleu : #24527c;  
+    --blanc-fond : #fefefe;  
+    --blanc : white;  
+    --gris : #bababa;
+}
+
+/*BODY*/
+
+body h3, h4{
+    margin: 2vh 0 1vh 1vw;
+}
+
+body p{
+    margin-left: 2vw;
+}
+
+/*MAIN*/
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main section{
+    padding: 1vh 2vw;
+}
+
+#form-main h3{
+    color: var(--bleu);
+    font-size: 2em;
+    font-weight: 400;
+}
+
+/*FORMULAIRE*/
+
+main section form{
+    display: flex;
+    flex-direction: column;
+}
+
+main #form-informations form label{
+    font-weight: bold;
+    margin: 1vh 0 0 3vw;
+}
+
+main #form-informations form input{
+    width: 50%;
+    margin: 0 0 1vh 3vw;
+}
+
+main #form-informations form textarea{
+    width: 50%;
+    height: 15vh;
+    margin: 0 0 1vh 3vw;
+}
+
+main #form-informations #send-form{
+    text-align: center;
+    padding: 1vh 0;
+}
+
+main #form-informations #send-form input{
+    color: var(--blanc);
+    background-color: var(--bleu);
+    padding: 1vh 0;
+    width: 50%;
+}
+
+main #form-competences h4{
+    color: var(--bleu);
+    margin: 2vh 0;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+main #form-competences div{
+    margin: 0 0 1vh 3vw;
+}
+
+/*CV-ROUGE*/
+
+#cv-rouge-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--rouge);
+    color: var(--blanc);
+}
+
+#cv-rouge-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#cv-rouge-main #cv-rouge-informations h3{
+    color: var(--rouge);
+    font-size: 2em;
+    font-weight: 400;
+}
+
+#cv-rouge-main h4{
+    color: var(--rouge);
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+#cv-rouge-main h5{
+    color: var(--rouge);
+    font-size: 1.2em;
+}
+
+#cv-rouge-main section ul{
+    margin-left: 3vw;
+}
